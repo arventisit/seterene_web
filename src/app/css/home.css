@@ -1,0 +1,10 @@
+
+.navBarContainer{
+    position: fixed;
+}
+@media (min-width: 1600px) {
+    .navBarContainer {
+     margin-left: 10%;
+     margin-right: 10%;
+    }
+  }
