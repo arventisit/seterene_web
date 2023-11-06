@@ -1,8 +1,6 @@
 import Head from 'next/head'
 
 const customStyleContainer = {
-  marginRight: '10%',
-  marginLeft: '10%',
   position: 'fixed',
 };
 
