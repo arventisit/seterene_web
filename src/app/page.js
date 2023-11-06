@@ -1,14 +1,10 @@
-import Head from 'next/head'
+import styles from './css/home.css';
 
-const customStyleContainer = {
-  position: 'fixed',
-};
 
 export default function Home() {
   return (
     <>
-      <div className="container" style={customStyleContainer}>
-      
+      <div className="container navBarContainer" >
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="" className="flex items-center">
