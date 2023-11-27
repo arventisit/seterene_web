@@ -6,10 +6,12 @@
     width: 100%;
 }
 
+/*slidermenu*/
 .sliderMenuContent{
     margin-top: 4%;
     max-width: 100%;
 }
+
 .sliderMenuContainer{
     height: 540px;
     width: 100%;
@@ -59,10 +61,109 @@
     margin-bottom: 6%;
 }
 
+/*sliderProductcss*/
+h2,h3,.product-container{
+    color: #1473e6;
+}
+
+h2 {
+    text-align: center;
+    margin: auto; 
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+h3 {
+    text-align: center;
+    margin: auto; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: 20px;
+    font-weight: inherit;
+}
+
+
+
+.product-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+}
+
+.product-item {
+    margin-right: 10px;
+}
+
+.separator {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.lineBold {
+   width: 71.2%;
+    height: 2px;
+    background-color: blue;
+    margin: auto;
+    margin-top: 1%;
+
+}
+
+.lineThin{
+   width: 71.2%;
+    height: 1px;
+    background-color: blue;
+    margin: auto;
+}
+
+.productContainer2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+  
+.productBox2 {
+    border: 1px solid black;
+    width: 250px; 
+    height: 170px; 
+    margin: 10px; 
+}
+
+.namaProduct{
+    text-align: center;
+}
+
+.information{
+  background-color: rgba(0, 109, 255, 0.36);
+  padding-bottom: 3%;
+}
+
+.info{
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+
+.tentangKami{
+    width: 68%;
+    margin:auto;
+}
+
+.infoAlamat{
+    display: flex;
+}
+
+.alamatlengkap{
+    background-color:rgba(0, 109, 255, 0.8);;
+    color: white;
+}
 @media only screen and (min-width: 1600px) {
     .navBarContainer {   
      width: 100%;
     }
+
+    /*slidermenu*/
     .sliderMenuContent{
         margin-left: 17%;
         margin-top: 4%;
@@ -81,4 +182,29 @@
         height: 100%;
         width: 100%;
     }
+
+    .sliderProductContainer{
+        margin-top: 4%;
+    }
+
+    .lineBold {
+        width: 66.2%;
+    }
+
+    .lineThin {
+        width: 66.2%;
+    }
+
+    .productBox2 {
+        border: 1px solid black;
+        width: 380px; 
+        height: 200px; 
+        margin: 10px; 
+    }
+
+    .info{
+        width: 64%;
+    }
+ 
+    
   }

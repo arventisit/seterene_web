@@ -1,6 +1,9 @@
 import styles from './data/css/home.css';
 import SliderMenu from './data/homepages/slidermenu.js';
-
+import Sliderproduct from './data/homepages/sliderproduct.js';
+import Info from './data/homepages/info';
+import Aboutus from './data/homepages/aboutus';
+import Footer from './data/homepages/footer';
 
 export default function Home() {
   return (
@@ -41,6 +44,21 @@ export default function Home() {
         <SliderMenu/>
       </div>
 
+      <div className='products'>
+        <Sliderproduct />
+      </div>
+
+      <div className='information'>
+        <Info />
+      </div>
+
+      <div className='aboutus'>
+        <Aboutus/>
+      </div>
+
+      <div className='footerpage'>
+        <Footer/>
+      </div>
     </>
   )
 }
