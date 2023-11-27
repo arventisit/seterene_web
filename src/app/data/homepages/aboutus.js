@@ -1,12 +1,10 @@
-import Image from "next/image";
-
 export default function Aboutus() {
   return (
     <>
       <h2>Tentang Kami</h2>
 
       <div className="tentangKami">
-        <div className="">
+        <div >
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -20,8 +18,6 @@ export default function Aboutus() {
           </p>
         </div>
         
-
-
       </div>
     </>
   );

@@ -36,7 +36,7 @@ export default function Footer() {
                     W.  www.arventisintl.com 
                 </p>
             </span>
-            <FontAwesomeIcon icon={icon({name: 'coffee', family: 'sharp', style: 'solid'})} />
+            {/* <FontAwesomeIcon icon={icon({name: 'coffee', family: 'sharp', style: 'solid'})} /> */}
           </div>
           <div className="flex-1 text-center bg-white-400 px-4 py-2 m-2">
             
