@@ -7,7 +7,6 @@ export default function SliderMenu() {
        <div className="sliderMenuContainer">
          <div className='sliderProductContainer'>
            <div className='productContainer'>
-
               <div>
                 <h3 className='tittleH3'>Autoclavable Goggles</h3>
                 <div className='productBox'>
@@ -33,13 +32,8 @@ export default function SliderMenu() {
                 <p className='productP'>disenfektan stickymat</p>
               </div>
              
-              
-             
-              
-              
            </div>
          </div>
-
         </div>
       </>
     );
