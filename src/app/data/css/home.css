@@ -158,6 +158,12 @@ h3 {
     background-color:rgba(0, 109, 255, 0.8);;
     color: white;
 }
+
+.register{
+    position: absolute;
+    top: 0;
+}
+
 @media only screen and (min-width: 1600px) {
     .navBarContainer {   
      width: 100%;

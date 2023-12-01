@@ -7,7 +7,6 @@ export default function Info() {
       <>
         <h2 className="text-white">Info</h2>
         <div className="info space-x-10">
-      
 
             <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
                 <Image className="w-full" width={500} height={500} src="/homeassets/empty-hallway-background.jpg" alt="Sunset in the mountains" />
