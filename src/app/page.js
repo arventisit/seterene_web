@@ -10,9 +10,18 @@ import Register from './data/homepages/register';
 
 export default function Home() {
   const [FastProductflag, setFastProductFlag] = useState(0);
+  const [registerFlag, setRegisterFlag] = useState(0);
 
-  const handleClick = (e) => {
+  const handleFastProductsHover = (e) => {
     setFastProductFlag(1);
+  };
+
+  const handleFastProductsClick = (e) => {
+    setFastProductFlag(0);
+  };
+
+  const handleRegistrationClick = (e) => {
+    setRegisterFlag(1);
   };
 
   return (
@@ -59,7 +68,8 @@ export default function Home() {
                 <li>
                   <a
                     href='#productsJudul'
-                    onMouseOver={handleClick}
+                    onMouseOver={handleFastProductsHover}
+                    onClick={handleFastProductsClick}
                     className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
                     aria-current='page'
                   >
@@ -85,6 +95,7 @@ export default function Home() {
                 <li>
                   <a
                     href='#'
+                    onClick={handleRegistrationClick}
                     className='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
                   >
                     Daftar/Login
@@ -100,9 +111,12 @@ export default function Home() {
         <SliderMenu flag={FastProductflag} setFlag={setFastProductFlag} />
       </div>
 
-      {/* <div className='register'>
-          <Register />
-      </div> */}
+      <div className='register'>
+        <Register
+          registerFlag={registerFlag}
+          setRegisterFlag={setRegisterFlag}
+        />
+      </div>
 
       <div className='products' id='productsJudul'>
         <Sliderproduct />
