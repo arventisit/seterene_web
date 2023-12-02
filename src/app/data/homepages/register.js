@@ -9,10 +9,7 @@ export default function Register({registerFlag}) {
     const modalLeaving = `ease-in duration-200 opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95`;
 
 
-    // if(registerFlag.backGround === 1){
-
-    // }
-
+    
   return (
     <>
       <div
