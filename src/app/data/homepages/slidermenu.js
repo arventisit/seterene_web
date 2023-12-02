@@ -1,12 +1,22 @@
-import Image from 'next/image';
+'use client';
+import { useState, useEffect } from "react";
 
 
-export default function SliderMenu({flag}) {
-  const display = flag === 1 ? {display:'block'} : {display:'none'}
+export default function SliderMenu({flag, setFlag}) {
+
+  const display = flag === 1  ? { display: 'block' } : { display: 'none' }
+
+
+  const mouseOut = () => {
+    setFlag(0)
+  }
+
+  
+
     return (
       <>
        <div className="sliderMenuContainer">
-         <div className='sliderProductContainer' style={display}>
+         <div className='sliderProductContainer'  onMouseLeave={mouseOut} style={display}>
            <div className='productContainer'>
               <div>
                 <h3 className='tittleH3'>Autoclavable Goggles</h3>

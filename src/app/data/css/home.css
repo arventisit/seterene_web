@@ -104,7 +104,7 @@ h3 {
 .lineBold {
    width: 71.2%;
     height: 2px;
-    background-color: blue;
+    background-color: rgba(32, 92,160, 1);
     margin: auto;
     margin-top: 1%;
 
@@ -113,7 +113,7 @@ h3 {
 .lineThin{
    width: 71.2%;
     height: 1px;
-    background-color: blue;
+    background-color: rgba(32, 92,160, 1);
     margin: auto;
 }
 
