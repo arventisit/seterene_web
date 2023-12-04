@@ -73,18 +73,54 @@ export default function Register({ registerFlag, setRegisterFlag }) {
                           class="toggle-label block overflow-hidden h-4 rounded-full bg-gray-300 cursor-pointer"
                         ></label>
                       </div>
-                      <label for="toggle" class="text-xs text-left text-gray-700">Toggle me.</label>
-
-
-                      <div className="mb-6">
+                      <label
+                        for="toggle"
+                        class="text-xs  text-gray-700 absolute left-20 top-40"
+                      >
+                        Toggle me.
+                      </label>
+                      <h4 className="text-center mt-3">Data Pribadi</h4>
+                      <div className=" mt-2">
                         <input
                           className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                           id="password"
                           type="password"
-                          placeholder="******************"
+                          placeholder="Nama Lengkap*"
                         />
                       </div>
-                      
+                      <div className="">
+                        <input
+                          className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                          id="password"
+                          type="password"
+                          placeholder="Kota*"
+                        />
+                      </div>
+                      <div className="">
+                        <input
+                          className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                          id="password"
+                          type="password"
+                          placeholder="Password*"
+                        />
+                      </div>
+                      <div className="flex">
+                        <input
+                          type="checkbox"
+                          className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                          id="hs-default-checkbox"
+                        />
+                        <label
+                          for="hs-default-checkbox"
+                          className="text-sm text-gray-500 ms-3 dark:text-gray-400"
+                        >
+                         Saya menyetujui ketentuan berikut*
+                        </label>
+                      </div>
+
+                      <span className=" mt-2 text-gray-500 hover:text-blue-500 cursor-pointer float-left font-light text-sm">
+                        <p className="login">sudah punya akun klik disini!</p>
+                      </span>
                     </form>
                   </div>
                 </div>
@@ -92,10 +128,10 @@ export default function Register({ registerFlag, setRegisterFlag }) {
               <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <button
                   type="button"
-                  className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
+                  className="inline-flex w-full justify-center rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 sm:ml-3 sm:w-auto"
                   onClick={handleAction}
                 >
-                  Deactivate
+                  Daftar
                 </button>
                 <button
                   type="button"
