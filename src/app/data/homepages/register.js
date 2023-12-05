@@ -1,6 +1,11 @@
 "use client";
+import { useState } from "react";
+import Login from "./login";
 
 export default function Register({ registerFlag, setRegisterFlag }) {
+  const [loginFlag, setloginFlag] = useState(0)
+
+
   const backgroundEntring = `ease-out duration-300 opacity-100`;
   const backgrounLeave = `ease-in duration-200 opacity-0 hidden`;
 
@@ -8,14 +13,18 @@ export default function Register({ registerFlag, setRegisterFlag }) {
   const modalLeaving = `ease-in duration-200 opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95`;
 
   const modalDisplay = registerFlag === 1 ? modalEntring : modalLeaving;
-  const backgroundDisplay =
-    registerFlag === 1 ? backgroundEntring : backgrounLeave;
+  const backgroundDisplay = registerFlag === 1 ? backgroundEntring : backgrounLeave;
   const handleAction = () => {
     setRegisterFlag(0);
   };
 
+  const handleLogin = () => {
+    setloginFlag(1);
+    setRegisterFlag(0);
+  }
+
   const blueHead = {
-    backgroundColor: "rgba(0, 109, 255, 1);",
+    backgroundColor: "rgba(0, 109, 255, 1)",
     width: "100%",
     height: "30px",
     position: "absolute",
@@ -61,21 +70,21 @@ export default function Register({ registerFlag, setRegisterFlag }) {
                           placeholder="Alamat Email*"
                         />
                       </div>
-                      <div class="relative w-7 mr-2 align-middle select-none transition duration-200 ease-in">
+                      <div className="relative w-7 mr-2 align-middle select-none transition duration-200 ease-in">
                         <input
                           type="checkbox"
                           name="toggle"
                           id="toggle"
-                          class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-2 appearance-none cursor-pointer"
+                          className="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-2 appearance-none cursor-pointer"
                         />
                         <label
-                          for="toggle"
-                          class="toggle-label block overflow-hidden h-4 rounded-full bg-gray-300 cursor-pointer"
+                          htmlFor="toggle"
+                          className="toggle-label block overflow-hidden h-4 rounded-full bg-gray-300 cursor-pointer"
                         ></label>
                       </div>
                       <label
-                        for="toggle"
-                        class="text-xs  text-gray-700 absolute left-20 top-40"
+                        htmlFor="toggle"
+                        className="text-xs  text-gray-700 absolute left-20 top-40"
                       >
                         Toggle me.
                       </label>
@@ -83,16 +92,16 @@ export default function Register({ registerFlag, setRegisterFlag }) {
                       <div className=" mt-2">
                         <input
                           className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                          id="password"
-                          type="password"
+                          id="namalengkap"
+                          type="text"
                           placeholder="Nama Lengkap*"
                         />
                       </div>
                       <div className="">
                         <input
                           className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                          id="password"
-                          type="password"
+                          id="kota"
+                          type="text"
                           placeholder="Kota*"
                         />
                       </div>
@@ -111,14 +120,14 @@ export default function Register({ registerFlag, setRegisterFlag }) {
                           id="hs-default-checkbox"
                         />
                         <label
-                          for="hs-default-checkbox"
+                          htmlFor="hs-default-checkbox"
                           className="text-sm text-gray-500 ms-3 dark:text-gray-400"
                         >
                          Saya menyetujui ketentuan berikut*
                         </label>
                       </div>
 
-                      <span className=" mt-2 text-gray-500 hover:text-blue-500 cursor-pointer float-left font-light text-sm">
+                      <span className=" mt-2 text-gray-500 hover:text-blue-500 cursor-pointer float-left font-light text-sm" onClick={handleLogin}>
                         <p className="login">sudah punya akun klik disini!</p>
                       </span>
                     </form>
@@ -143,7 +152,11 @@ export default function Register({ registerFlag, setRegisterFlag }) {
               </div>
             </div>
           </div>
-        </div>
+        </div>s
+      </div>
+
+      <div className="login">
+        <Login loginFlags={{loginFlag, registerFlag}} setloginFlags={{setloginFlag, setRegisterFlag}} />
       </div>
     </>
   );
