@@ -34,6 +34,7 @@ export default function SliderMenu({ flag, setFlag }) {
       // Cleanup: Clear the interval when the component unmounts
       clearInterval(intervalId);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mouseEnter]);
 
   return (
