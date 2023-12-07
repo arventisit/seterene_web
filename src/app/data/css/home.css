@@ -62,7 +62,7 @@
 }
 
 /*sliderProductcss*/
-h2,h3,.product-container{
+h2,h3{
     color: #1473e6;
 }
 
@@ -90,30 +90,29 @@ h3 {
     display: flex;
     font-family: Arial, sans-serif;
     justify-content: center;
+    /* color: rgba(32, 92,160,0.8); */
 }
 
-.product-item {
-    margin-right: 10px;
+/* .product-item{
+    width: 26.5rem;
+} */
+
+
+.product-item:not(:last-child)::after {
+    border-right: 1px solid #000;
+    content: "";
+    height: 27px;
+    margin-left: 100%;
+    margin-top: -10px;
+    transform: translateY(-50%);
+    display: inline-block;
 }
 
-.separator {
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-.lineBold {
-   width: 71.2%;
-    height: 2px;
-    background-color: blue;
-    margin: auto;
-    margin-top: 1%;
-
-}
 
 .lineThin{
-   width: 71.2%;
+    width: 60.3rem;;
     height: 1px;
-    background-color: blue;
+    background-color: rgba(32, 92,160, 1);
     margin: auto;
 }
 
@@ -158,6 +157,25 @@ h3 {
     background-color:rgba(0, 109, 255, 0.8);;
     color: white;
 }
+
+.register{
+    position: absolute;
+    top: 0;
+}
+
+
+.toggle-checkbox:checked {
+    @apply: right-0 border-green-400;
+    right: 0;
+    border-color: #68D391;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply: bg-green-400;
+    background-color: #68D391;
+  }
+
+
+
 @media only screen and (min-width: 1600px) {
     .navBarContainer {   
      width: 100%;
@@ -187,12 +205,8 @@ h3 {
         margin-top: 4%;
     }
 
-    .lineBold {
-        width: 66.2%;
-    }
-
     .lineThin {
-        width: 66.2%;
+        width: 79.5rem;
     }
 
     .productBox2 {
@@ -205,6 +219,7 @@ h3 {
     .info{
         width: 64%;
     }
- 
+    
+
     
   }

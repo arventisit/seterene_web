@@ -1,29 +1,40 @@
+'use client'
+import { useState } from "react"; 
 
 
-export default function Sliderproduct() {
+const ProductItem = ({ children }) => {
+    const [isHovered, setIsHovered] = useState(false);
+  
+    const productThemeStyle = `product-item  ${isHovered ? 'border-blue-500 border-b-4' : 'border-black border-b'} pb-2 hover:text-blue-500 text-center w-[20rem] sm:w-[26.5rem] transition-all duration-400`;
+  
+    return (
+      <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={productThemeStyle}
+      >
+        <div>{children}</div>
+      </div>
+    );
+  };
+
+
+export default function Sliderproduct() {  
     return (
       <>
-        <h2>Produk Kami</h2>
-
-        
-        <div className="product-container">
-            <div className="product-item">Disinfektan</div>
-            <div className="separator">|</div>
-            <div className="product-item">Autoclavable Googles</div>
-            <div className="separator">|</div>
-            <div className="product-item">Stickymat</div>
+        <h2 className="mb-10">Produk Kami</h2>
+        <div className="product-container mb-10">
+            <ProductItem>Disinfektan</ProductItem>
+            <ProductItem>Autoclavable Googles</ProductItem>
+            <ProductItem>Stickymat</ProductItem>
         </div>
-
-        {/* Autoclavable Googles */}
-        <div className="lineBold"></div>
-        <h3>Autoclavable Googles</h3>
+        
+       {/* disinfektan */}
+        <h3 className="mb-10 mt-0" id="disenfektan">Disinfektan</h3>
         <div className="lineThin"></div>
-
         <div className='productContainer2'>
-            
             <div className="theProduct">
                 <div className='productBox2'>
-                
                 </div>
                 <p className="namaProduct">Nama produk</p>
             </div>
@@ -42,10 +53,9 @@ export default function Sliderproduct() {
              
         </div>
 
-
-       {/* disinfektan */}
-        <div className="lineBold"></div>
-        <h3>Disinfektan</h3>
+        
+        {/* Autoclavable Googles */}
+       <h3 id="autoclavableGoogles">Autoclavable Googles</h3>
         <div className="lineThin"></div>
 
         <div className='productContainer2'>
@@ -72,8 +82,7 @@ export default function Sliderproduct() {
         </div>
 
        {/* Stickymat */}
-        <div className="lineBold"></div>
-        <h3>Stickymat</h3>
+        <h3 id="stickymat">Stickymat</h3>
         <div className="lineThin"></div>
 
         <div className='productContainer2'>
